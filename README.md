@@ -9,4 +9,4 @@ A*算法可视化求解八数码问题
 
 项目演示地址 https://f14xuanlv.github.io/A-star-Solver-for-Eight-Puzzle-Visualization
 
-[A-Star Solver for Eight Puzzle Visualization](https://f14xuanlv.github.io/A-star-Solver-for-Eight-Puzzle-Visualization)
+[A* Solver for Eight Puzzle Visualization](https://f14xuanlv.github.io/A-star-Solver-for-Eight-Puzzle-Visualization)
