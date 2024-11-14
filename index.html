@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八数码问题 A*算法可视化</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左上角实时状态显示区域 -->
+        <div class="status-area">
+            <div class="state-display">
+                <div class="current-state">
+                    <h2>当前状态</h2>
+                    <div class="puzzle-grid" id="currentState">
+                        <!-- 九宫格将由JS动态生成 -->
+                    </div>
+                </div>
+                <div class="target-state">
+                    <h2>目标状态</h2>
+                    <div class="puzzle-grid" id="targetState">
+                        <!-- 九宫格将由JS动态生成 -->
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <p>当前状态: <span id="currentStateId">0</span> / <span id="totalStates">0</span></p>
+                <p>最少步数: <span id="minSteps">0</span></p>
+            </div>
+            <div class="controls">
+                <button id="randomize">随机生成</button>
+                <button id="nextStep">下一步</button>
+                <button id="reset">重置</button>
+            </div>
+        </div>
+
+        <!-- 右上角表区域 -->
+        <div class="tables-area">
+            <div class="mode-selector">
+                <label>
+                    <input type="checkbox" id="notShowList"> 不渲染表格(在状态数超过1500时建议勾选)
+                </label>
+            </div>
+            <div class="table-container">
+                <h3>Open表</h3>
+                <div class="table-scroll" id="openTable">
+                    <!-- 表格内容将由JS动态生成 -->
+                </div>
+            </div>
+            <div class="table-container">
+                <h3>Close表</h3>
+                <div class="table-scroll" id="closeTable">
+                    <!-- 表格内容将由JS动态生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 下方搜索树区域 -->
+        <div class="tree-area">
+            <div class="tree-container" id="searchTree">
+                <svg></svg>
+                <!-- 搜索树将由JS动态生成 -->
+            </div>
+            <div class="mode-selector">
+                <label>
+                    <input type="checkbox" id="optimalPath"> 只显示最优路径
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
